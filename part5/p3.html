@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Events</h1>
+    <button id="but">Button</button>
+
+    <script>
+        var but = document.getElementById('but');
+
+        // but.addEventListener('click',handleClick,{once:true});
+        but.addEventListener('click',handleClick);
+
+        function handleClick(){
+            alert('buttton click')
+        }
+
+        setTimeout(function(){
+            but.removeEventListener('click',handleClick)
+        },3000)
+
+    </script>
+</body>
+</html>
